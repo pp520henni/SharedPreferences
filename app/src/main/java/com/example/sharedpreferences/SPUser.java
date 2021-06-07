@@ -29,35 +29,35 @@ public class SPUser {
         return instance;
     }
 
-    public static void putBoolean(String key, boolean value) {
+    public void putBoolean(String key, boolean value) {
         SharedPreferences.Editor editor = mSp.edit();
         editor.putBoolean(key, value);
         editor.apply();
     }
-    public static boolean getBoolean(String key) {
+    public boolean getBoolean(String key) {
         return mSp.getBoolean(key, false);
     }
 
-    public static void putInt(String key, int value) {
+    public void putInt(String key, int value) {
         SharedPreferences.Editor editor = mSp.edit();
         editor.putInt(key, value);
         editor.apply();
 //        boolean t = editor.commit();
     }
-    public static int getInt(String key) {
+    public int getInt(String key) {
         return mSp.getInt(key, 0);
     }
 
-    public static void putString(String key, String value) {
+    public void putString(String key, String value) {
         SharedPreferences.Editor editor = mSp.edit();
         editor.putString(key, value);
         editor.apply();
     }
-    public static String getString(String key) {
+    public String getString(String key) {
         return mSp.getString(key, null);
     }
 
-    public static void deleteData(String key) {
+    public void deleteData(String key) {
         SharedPreferences.Editor editor = mSp.edit();
         editor.remove(key);
         editor.apply();

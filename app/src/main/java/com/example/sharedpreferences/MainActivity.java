@@ -34,11 +34,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if(view == mPutDataButton){
             //提交数据
-            SPUser.putString("content", mPutDataEdit.getText().toString());
+            mSPUser.putString("content", mPutDataEdit.getText().toString());
             Toast.makeText(this,"保存数据成功:" + mPutDataEdit.getText().toString(), Toast.LENGTH_SHORT).show();
         }else if(view == mGetDataButton){
             //获取数据
-            String content = SPUser.getString("content");
+            String content = mSPUser.getString("content");
             mDataTextView.setText(content);
         }
     }
